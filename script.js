@@ -71,22 +71,4 @@ form.addEventListener("submit", async (e) => {
   }
 });
 
-async function zeptejSeAI(dotaz) {
-    const apiKey = "VÁŠ_API_KLÍČ"; // Pozor: na veřejném webu je to nebezpečné!
-    const url = "https://api.openai.com/v1/chat/completions";
 
-    const response = await fetch(url, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${apiKey}`
-        },
-        body: JSON.stringify({
-            model: "gpt-4o-mini",
-            messages: [{ role: "user", content: dotaz }]
-        })
-    });
-
-    const data = await response.json();
-    return data.choices[0].message.content;
-}
