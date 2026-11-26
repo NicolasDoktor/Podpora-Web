@@ -1,2 +1,2 @@
-# VDF-GAMES-KOSTAK
+# VDF-GAMES-DOKTOR
 VDF Games Support Solution
